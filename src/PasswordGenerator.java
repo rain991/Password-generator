@@ -1,12 +1,12 @@
 import java.util.Random;
 
 public class PasswordGenerator {
+    static String special = "!@#$%^&*+<>?";
 
     static String generatePassword(int length, boolean onlyDigits, boolean onlyLetters, boolean specialChar) {
         Random random = new Random();
         String digits = "0123456789";
         String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String special = "!@#$%^&*+<>?";
 
         String characterPool = "";
         if (onlyDigits) {
@@ -38,7 +38,6 @@ public class PasswordGenerator {
     }
 
     static private boolean containsSpecialCharacter(String password) {
-        String special = "!@#$%^&*()-_=+<>?";
         for (char ch : password.toCharArray()) {
             if (special.indexOf(ch) >= 0) {
                 return true;

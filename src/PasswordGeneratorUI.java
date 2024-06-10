@@ -19,7 +19,6 @@ public class PasswordGeneratorUI extends JFrame {
         setTitle("Password Generator");
         setSize(400, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
 
         // JMenu
         JMenuBar menuBar = new JMenuBar();
